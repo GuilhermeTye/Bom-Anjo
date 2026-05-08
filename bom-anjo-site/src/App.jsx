@@ -8,7 +8,7 @@ import mottim from "./assets/mottim.jpeg";
 import otica from "./assets/otica.jpeg";
 import pedrinho from "./assets/pedrinho.jpeg";
 
-const whatsappNumber = "5541999999999";
+const whatsappNumber = "5541984127168";
 
 function abrirWhatsApp(mensagem) {
   const texto = encodeURIComponent(mensagem);
