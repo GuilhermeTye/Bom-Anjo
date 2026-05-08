@@ -84,7 +84,7 @@ a:focus-visible {
 
 .header {
   width: 100%;
-  min-height: 100px;
+  min-height: 120px;
   padding: 0 24px 0 2%;
   background: rgba(4, 8, 28, 0.92);
   backdrop-filter: blur(18px);
