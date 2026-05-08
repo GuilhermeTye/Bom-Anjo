@@ -147,7 +147,7 @@ export default function App() {
 
             <p>
               Planos funerários familiares com cobertura completa, atendimento
-              humanizado e benefícios exclusivos para planistas Bom Anjo.
+              humanizado e benefícios exclusivos associados Bom Anjo.
             </p>
 
             <div className="heroActions">
@@ -232,7 +232,7 @@ export default function App() {
           <h2>Clube de Descontos Bom Anjo</h2>
 
           <p className="clubText">
-            Sendo planista Bom Anjo, você participa de um grupo especial de
+            Sendo associado Bom Anjo, você participa de um grupo especial de
             descontos com empresas parceiras da nossa cidade.
           </p>
 
@@ -244,7 +244,7 @@ export default function App() {
                 <div>
                   <span>{parceiro.categoria}</span>
                   <h3>{parceiro.nome}</h3>
-                  <p>Desconto especial para planistas Bom Anjo.</p>
+                  <p>Desconto especial para  Bom Anjo.</p>
                 </div>
               </div>
             ))}
