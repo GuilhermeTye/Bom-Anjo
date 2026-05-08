@@ -33,11 +33,32 @@ html {
   --shadow: 0 28px 76px rgba(0, 0, 0, 0.45);
 }
 
+/* =========================
+   BODY
+========================= */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #000;
   color: var(--white);
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.78),
+      rgba(0, 0, 0, 0.78)
+    ),
+    url("./assets/background.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  min-height: 100vh;
 }
+
+/* =========================
+   GERAL
+========================= */
 
 button,
 a {
@@ -49,14 +70,24 @@ button {
   cursor: pointer;
   border-radius: 999px;
   padding: 15px 28px;
-  background: linear-gradient(135deg, #ffe8a3, #c9983d);
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe8a3,
+      #c9983d
+    );
+
   color: #050814;
+
   font-weight: 900;
   font-size: 15px;
+
   transition:
     transform 0.25s ease,
     filter 0.25s ease,
     box-shadow 0.25s ease;
+
   box-shadow: 0 18px 38px rgba(201, 152, 61, 0.32);
 }
 
@@ -72,10 +103,11 @@ a:focus-visible {
 }
 
 .site {
-  width: 100%;
+  width: 117%;
   min-height: 100vh;
   overflow-x: hidden;
-  background: #000;
+
+  background: transparent;
 }
 
 /* =========================
@@ -85,51 +117,71 @@ a:focus-visible {
 .header {
   width: 100%;
   min-height: 120px;
+
   padding: 0 24px 0 2%;
-  background: rgba(4, 8, 28, 0.92);
+
+  background: rgba(4, 8, 28, 0.88);
+
   backdrop-filter: blur(18px);
+
   border-bottom: 1px solid var(--border);
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 24px;
 
   position: fixed;
   top: 0;
   left: 0;
+
   z-index: 100;
 }
 
 .brand {
   display: flex;
   align-items: center;
+
   gap: 14px;
+
   text-decoration: none;
+
   color: var(--white);
+
   flex-shrink: 0;
 }
 
 .brand img {
-  width: 300px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
+
   object-fit: contain;
+
   mix-blend-mode: screen;
 }
 
 .brand strong {
   display: block;
+
   font-family: Georgia, "Times New Roman", serif;
+
   font-size: 30px;
+
   line-height: 1;
 }
 
 .brand span {
   display: block;
+
   margin-top: 6px;
+
   font-size: 11px;
+
   text-transform: uppercase;
+
   letter-spacing: 3px;
+
   color: var(--gold-light);
 }
 
@@ -137,15 +189,21 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 26px;
+
   flex-wrap: wrap;
 }
 
 .nav a {
   color: var(--white);
+
   text-decoration: none;
+
   font-size: 15px;
+
   font-weight: 800;
+
   transition: color 0.25s ease;
 }
 
@@ -175,36 +233,34 @@ a:focus-visible {
   gap: 60px;
 
   position: relative;
+
   overflow: hidden;
 
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.70),
-      rgba(0, 0, 0, 0.70)
-    ),
-    url("./assets/background.jpeg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: transparent !important;
 }
 
 .hero::before {
   content: "";
+
   position: absolute;
+
   inset: 0;
 
   background:
-    radial-gradient(circle at center,
+    radial-gradient(
+      circle at center,
       rgba(20, 28, 95, 0.35),
-      transparent 42%);
+      transparent 42%
+    );
 
   pointer-events: none;
 }
 
 .hero::after {
   content: "";
+
   position: absolute;
+
   inset: 0;
 
   background:
@@ -315,6 +371,10 @@ a:focus-visible {
   padding-bottom: 5px;
 }
 
+/* =========================
+   HERO CARD
+========================= */
+
 .heroCard {
   justify-self: center;
 
@@ -335,15 +395,15 @@ a:focus-visible {
   background:
     linear-gradient(
       145deg,
-      rgba(10, 17, 52, 0.94),
-      rgba(3, 6, 22, 0.96)
+      rgba(10, 17, 52, 0.92),
+      rgba(3, 6, 22, 0.94)
     );
 
   border: 1px solid rgba(255, 232, 163, 0.24);
 
   box-shadow: 0 38px 100px rgba(0, 0, 0, 0.62);
 
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 }
 
 .heroCard img {
@@ -423,17 +483,11 @@ a:focus-visible {
   width: 100%;
   min-height: 100vh;
 
-  padding: 130px 8% 95px;
+  padding: 130px 5% 95px;
 
   text-align: center;
 
-  background:
-    linear-gradient(
-      180deg,
-      #02030b 0%,
-      #08112d 50%,
-      #02030b 100%
-    );
+  background: transparent !important;
 }
 
 .plansSection h2,
@@ -453,385 +507,9 @@ a:focus-visible {
   text-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.plans {
-  width: 100%;
-  max-width: 1600px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: 34px;
-}
-
-.plan {
-  padding: 42px;
-
-  border-radius: 38px;
-
-  text-align: left;
-
-  position: relative;
-
-  overflow: hidden;
-
-  background: rgba(10, 18, 52, 0.82);
-
-  border: 1px solid rgba(255, 232, 163, 0.18);
-
-  box-shadow: var(--shadow);
-
-  display: flex;
-  flex-direction: column;
-
-  backdrop-filter: blur(10px);
-}
-
-.plan.featured {
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff,
-      #f3f0ff
-    );
-
-  color: #120940;
-
-  border: 2px solid var(--gold-light);
-}
-
-.planTop span {
-  display: inline-block;
-
-  margin-bottom: 20px;
-
-  padding: 11px 20px;
-
-  border-radius: 999px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #ffe8a3,
-      #c9983d
-    );
-
-  color: #12062f;
-
-  font-size: 13px;
-
-  font-weight: 900;
-
-  text-transform: uppercase;
-}
-
-.plan h3 {
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(42px, 4vw, 62px);
-
-  line-height: 1;
-
-  margin-bottom: 22px;
-}
-
-.price {
-  margin-bottom: 24px;
-}
-
-.price strong {
-  display: block;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(46px, 4vw, 68px);
-
-  line-height: 1;
-
-  margin-bottom: 8px;
-
-  color: var(--gold-light);
-}
-
-.plan.featured .price strong {
-  color: #120940;
-}
-
-.price small {
-  display: block;
-
-  margin-bottom: 14px;
-
-  text-transform: uppercase;
-
-  letter-spacing: 5px;
-
-  color: var(--muted);
-
-  font-size: 12px;
-
-  font-weight: 900;
-}
-
-.plan.featured .price small {
-  color: #4c4275;
-}
-
-.price p {
-  margin-top: 4px;
-
-  color: var(--gold-light);
-
-  font-weight: 900;
-
-  font-size: 20px;
-}
-
-.plan.featured .price p {
-  color: #bd8730;
-}
-
-.planDesc {
-  margin-bottom: 28px;
-
-  color: var(--text);
-
-  line-height: 1.7;
-
-  font-size: 18px;
-}
-
-.plan.featured .planDesc {
-  color: #20164f;
-}
-
-.plan ul {
-  padding-left: 22px;
-  padding-right: 8px;
-
-  margin-bottom: 34px;
-
-  flex: 1;
-}
-
-.plan li {
-  margin-bottom: 12px;
-
-  color: var(--text);
-
-  line-height: 1.55;
-
-  font-size: 16px;
-}
-
-.plan.featured li {
-  color: #20164f;
-}
-
-/* =========================
-   CLUB
-========================= */
-
-.clubText {
-  max-width: 860px;
-
-  margin: -24px auto 54px;
-
-  color: var(--text);
-
-  font-size: 20px;
-
-  line-height: 1.8;
-}
-
-.clubGrid,
-.benefitsGrid {
-  width: 100%;
-  max-width: 1500px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 30px;
-}
-
-.clubCard,
-.benefitsGrid div {
-  padding: 30px;
-
-  text-align: left;
-
-  border-radius: 36px;
-
-  background: rgba(8, 15, 45, 0.76);
-
-  border: 1px solid rgba(255, 232, 163, 0.16);
-
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
-
-  backdrop-filter: blur(10px);
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.clubCard:hover {
-  transform: translateY(-7px);
-
-  border-color: rgba(255, 232, 163, 0.55);
-}
-
-.clubCard img {
-  width: 100%;
-
-  aspect-ratio: 1 / 1;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  margin-bottom: 22px;
-
-  border: 5px solid var(--gold);
-
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.85);
-}
-
-.clubCard span {
-  color: var(--gold-light);
-
-  font-size: 12px;
-
-  font-weight: 900;
-
-  text-transform: uppercase;
-
-  letter-spacing: 2px;
-}
-
-.clubCard h3,
-.benefitsGrid h3 {
-  margin-top: 8px;
-  margin-bottom: 10px;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 30px;
-
-  color: var(--gold-light);
-}
-
-.clubCard p,
-.benefitsGrid p {
-  color: var(--text);
-
-  line-height: 1.7;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.78),
-      rgba(0, 0, 0, 0.78)
-    ),
-    url("./assets/background.jpeg");
-
-  background-size: cover;
-  background-position: center;
-}
-
-.contact img {
-  width: 300px;
-
-  max-width: 80%;
-
-  margin-bottom: 30px;
-
-  object-fit: contain;
-
-  mix-blend-mode: screen;
-}
-
-.contact p {
-  color: var(--text);
-
-  font-size: 20px;
-
-  margin-bottom: 32px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  padding: 32px 5%;
-
-  background: #000;
-
-  color: var(--muted);
-
-  text-align: center;
-
-  font-size: 14px;
-}
-
-.floatWhats {
-  position: fixed;
-
-  right: 26px;
-  bottom: 26px;
-
-  z-index: 200;
-
-  background: #25d366;
-
-  color: white;
-}
-
-.floatWhats:hover {
-  background: #1ebe5d;
-}
-
 /* =========================
    RESPONSIVO
 ========================= */
-
-@media (max-width: 1200px) {
-  .header {
-    padding: 14px 4%;
-  }
-
-  .nav {
-    gap: 18px;
-  }
-
-  .plans {
-    grid-template-columns: 1fr;
-    max-width: 850px;
-  }
-
-  .clubGrid,
-  .benefitsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 @media (max-width: 980px) {
   html {
@@ -839,11 +517,13 @@ footer {
   }
 
   .header {
-    min-height: auto;
+    width: 100%;
+    min-height: 110px;
 
+    display: flex;
     flex-direction: column;
-
     justify-content: center;
+    align-items: center;
 
     gap: 16px;
 
@@ -854,13 +534,17 @@ footer {
     justify-content: center;
   }
 
-  .brand strong {
-    font-size: 24px;
+  .brand img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+
+    mix-blend-mode: screen;
   }
 
-  .brand img {
-    width: 58px;
-    height: 58px;
+  .brand strong {
+    font-size: 24px;
   }
 
   .brand span {
@@ -902,11 +586,6 @@ footer {
     max-width: 520px;
 
     margin: 0 auto;
-  }
-
-  .clubGrid,
-  .benefitsGrid {
-    grid-template-columns: 1fr;
   }
 
   .plansSection,
@@ -952,29 +631,8 @@ footer {
     max-width: 280px;
   }
 
-  .plan {
-    padding: 28px;
-
-    border-radius: 30px;
-  }
-
-  .plan h3 {
-    font-size: 42px;
-  }
-
-  .price strong {
-    font-size: 46px;
-  }
-
   .tag {
     letter-spacing: 2px;
     font-size: 10px;
-  }
-
-  .floatWhats {
-    right: 16px;
-    bottom: 16px;
-
-    padding: 13px 18px;
   }
 }
