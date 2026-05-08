@@ -114,8 +114,7 @@ export default function App() {
         <a href="#inicio" className="brand">
           <img src={logoBomAnjo} alt="Bom Anjo Assistência Funerária" />
           <div>
-            <strong>Bom Anjo</strong>
-            <span>Assistência Funerária</span>
+            
           </div>
         </a>
 
